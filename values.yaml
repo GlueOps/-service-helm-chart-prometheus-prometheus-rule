@@ -4,6 +4,5 @@ expr: nil
 duration: 10m
 labels:
   team: nil
-  namespace: nil
   component: nil
 description: This is a test alert to verify the opsgenie integration.
