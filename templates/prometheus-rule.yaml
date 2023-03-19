@@ -1,13 +1,13 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
-  name: {{ .Values.name }}
+  name: {{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
 spec:
   groups:
-    - name: {{ .Values.alertname }}
+    - name: {{ .Release.Name }}
       rules:
-        - alert: {{ .Values.alertname }}
+        - alert: {{ .Release.Name }}
           expr: {{ .Values.expr }}
           for: {{ .Values.duration }}
           labels:
@@ -17,7 +17,7 @@ spec:
       {{ if ne (toString .Values.labels.component) "nil" }}
             component: {{ .Values.labels.component }}
       {{ end }}
-            alertname: {{ .Values.alertname }}
+            alertname: {{ .Release.Name }}
             namespace: {{ .Release.Namespace }}
           annotations:
             description: {{ .Values.description }}
