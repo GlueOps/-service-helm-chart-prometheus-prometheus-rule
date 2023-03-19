@@ -5,9 +5,9 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   groups:
-    - name: {{ .Values.groupName }}
+    - name: {{ .Values.alertname }}
       rules:
-        - alert: {{ .Values.alertName }}
+        - alert: {{ .Values.alertname }}
           expr: {{ .Values.expr }}
           for: {{ .Values.duration }}
           labels:
@@ -17,7 +17,7 @@ spec:
       {{ if ne (toString .Values.labels.component) "nil" }}
             component: {{ .Values.labels.component }}
       {{ end }}
-            alertname: {{ .Values.alertName }}
+            alertname: {{ .Values.alertname }}
             namespace: {{ .Release.Namespace }}
           annotations:
             description: {{ .Values.description }}
