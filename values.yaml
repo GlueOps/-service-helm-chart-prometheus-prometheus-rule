@@ -1,0 +1,10 @@
+name: yolo6-alert
+groupName: yolo6-alert
+alertName: yolo6-alert
+expr: vector(0)
+duration: 5m
+labels:
+  team: nil
+  namespace: nil
+  component: nil
+description: This is a test alert to verify the opsgenie integration.
