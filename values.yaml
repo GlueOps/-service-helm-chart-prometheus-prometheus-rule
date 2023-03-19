@@ -1,8 +1,8 @@
-name: yolo6-alert
-groupName: yolo6-alert
-alertName: yolo6-alert
-expr: vector(0)
-duration: 5m
+name: nil
+groupName: nil
+alertName: nil
+expr: nil
+duration: 10m
 labels:
   team: nil
   namespace: nil
