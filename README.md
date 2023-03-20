@@ -8,8 +8,8 @@ A Helm chart for Kubernetes
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| description | string | `"This is a test alert to verify the opsgenie integration."` |  |
-| duration | string | `"10m"` |  |
-| expr | string | `"nil"` |  |
-| labels.component | string | `"nil"` |  |
-| labels.team | string | `"nil"` |  |
+| description | string | `"This is the default alert description. Please change this to be more useful."` | Description of the alert. Make this informative to the responding team(s) know what this alert is for. |
+| duration | string | `"10m"` | Amount of time for the PromQL expression to be true before an alert gets fired. |
+| expr | string | `"vector(0)"` | PromQL Expression |
+| labels.component | string | `"nil"` | Name of component. Ex. backend, frontend, authentication, database, search. |
+| labels.team | string | `"nil"` | Team name that will react to any alerts |
