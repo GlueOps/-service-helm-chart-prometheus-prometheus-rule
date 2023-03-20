@@ -3,6 +3,7 @@ expr: vector(0)
 
 # -- https://prometheus.io/docs/prometheus/latest/querying/basics/#time-durations
 duration: 10m
+
 labels:
 # -- Team name that will react to any alerts
   team: nil
