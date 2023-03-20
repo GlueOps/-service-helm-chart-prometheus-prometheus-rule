@@ -1,6 +1,6 @@
 apiVersion: v2
 name: prometheus-prometheusrule
-description: A Helm chart to create an alert
+description: This chart lets you create an alert based off a PromQL query.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
