@@ -1,7 +1,7 @@
 # -- PromQL Expression
 expr: vector(0)
 
-# -- https://prometheus.io/docs/prometheus/latest/querying/basics/#time-durations
+# -- Amount of time for the PromQL expression to be true before an alert gets fired.
 duration: 10m
 
 labels:
